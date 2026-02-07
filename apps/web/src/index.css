@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --cream: #F5F1E8;
+    --sage-green: #8B9D83;
+    --warm-brown: #6B4423;
+    --accent-gold: #D4A574;
+  }
+
+  body {
+    @apply bg-cream text-gray-900;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-sm;
+  }
+
+  .glass-card-dark {
+    background-color: rgba(107, 68, 35, 0.95);
+    @apply backdrop-blur-md;
+  }
+
+  .bg-warm-brown\/95 {
+    background-color: rgba(107, 68, 35, 0.95);
+  }
+
+  .text-cream {
+    color: var(--cream);
+  }
+
+  .bg-cream {
+    background-color: var(--cream);
+  }
+
+  .text-sage-green {
+    color: var(--sage-green);
+  }
+
+  .bg-sage-green {
+    background-color: var(--sage-green);
+  }
+
+  .text-warm-brown {
+    color: var(--warm-brown);
+  }
+
+  .bg-warm-brown {
+    background-color: var(--warm-brown);
+  }
+
+  .text-accent-gold {
+    color: var(--accent-gold);
+  }
+
+  .bg-accent-gold {
+    background-color: var(--accent-gold);
+  }
+
+  .border-sage-green {
+    border-color: var(--sage-green);
+  }
+
+  .border-warm-brown {
+    border-color: var(--warm-brown);
+  }
+
+  .border-accent-gold {
+    border-color: var(--accent-gold);
+  }
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+  @apply transition-colors duration-200;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--sage-green);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--warm-brown);
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Enhanced shadows for premium feel */
+.shadow-premium {
+  box-shadow: 0 10px 40px rgba(107, 68, 35, 0.15);
+}
+
+.shadow-premium-lg {
+  box-shadow: 0 20px 60px rgba(107, 68, 35, 0.2);
+}
+
+/* Line clamp utility */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
